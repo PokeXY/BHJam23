@@ -292,7 +292,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -411,6 +411,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 621249521}
   moveSpeed: 7
+  firePoint: {fileID: 621249523}
+  projectilePrefab: {fileID: 3067634594453860675, guid: c3c3a0d05eb928c489c5c7732b9df908, type: 3}
+  fireRate: 0.075
+  projectileForce: 75
 --- !u!1 &749533481
 GameObject:
   m_ObjectHideFlags: 0
