@@ -110,6 +110,14 @@ namespace BulletFury
                 renderCamera = Camera.main;
             
             _bullets = new BulletContainer[BULLETS_MAX];
+            for (int i = 0; i < BULLETS_MAX; i++)
+            {
+                _bullets[i] = new BulletContainer
+                {
+                    Id = i,
+                    Dead = 1
+                };
+            }
             _matrices = new List<Matrix4x4>(BULLETS_MAX);
             _colors = new Vector4[BULLETS_MAX];
             _materialPropertyBlock = new MaterialPropertyBlock();

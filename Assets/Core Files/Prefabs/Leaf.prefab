@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5266225411496788308}
   - component: {fileID: 1008476423000860854}
   - component: {fileID: 2425172630965937284}
+  - component: {fileID: 5398744026725173937}
   m_Layer: 6
   m_Name: Leaf
   m_TagString: Untagged
@@ -123,3 +124,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &5398744026725173937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3067634594453860675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411ea0cc453b264d8ad35469e9f9b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
