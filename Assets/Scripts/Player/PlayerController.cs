@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 
 
@@ -25,12 +26,33 @@ public class PlayerController : MonoBehaviour
 
     Vector2 moveDirection = Vector2.zero;
 
+    public float hitpoints;
+    public float maxHitpoints;
+    public TextMeshProUGUI healthUI;
+
     bool isSlow;
     bool isShooting;
 
     void Awake()
     {
         controls = new PlayerAction();
+        hitpoints = maxHitpoints;
+        healthUI.text = "Player HP: " + hitpoints.ToString();
+    }
+
+    public void TakeHit(float damage)
+    {
+        hitpoints -= damage;
+        healthUI.text = "Player HP: " + hitpoints.ToString();
+        if (hitpoints <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (hitpoints < 0)
+        {
+            hitpoints = 0;
+        }
     }
 
     private void OnEnable()
@@ -122,7 +144,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(gameObject);
+            TakeHit(5);
         }
 
     }

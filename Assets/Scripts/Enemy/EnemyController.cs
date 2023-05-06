@@ -12,9 +12,10 @@ public class EnemyController : MonoBehaviour
     public HitpointBar hitpointBar;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         hitpoints = maxHitpoints;
+        healthUI.text = "HP: " + hitpoints.ToString();
         hitpointBar.SetHealth(hitpoints, maxHitpoints);
     }
 
