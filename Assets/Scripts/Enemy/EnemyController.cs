@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class EnemyController : MonoBehaviour
         hitpointBar.SetHealth(hitpoints, maxHitpoints);
         if (hitpoints <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Win");
         }
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
         healthUI.text = "Player HP: " + hitpoints.ToString();
         if (hitpoints <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
 
         if (hitpoints < 0)

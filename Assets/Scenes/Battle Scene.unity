@@ -590,8 +590,8 @@ MonoBehaviour:
   moveSpeed: 7
   firePoint: {fileID: 621249523}
   projectilePrefab: {fileID: 3067634594453860675, guid: c3c3a0d05eb928c489c5c7732b9df908, type: 3}
-  fireRate: 0.075
-  projectileForce: 75
+  fireRate: 0.065
+  projectileForce: 100
   hitpoints: 5
   maxHitpoints: 5
   healthUI: {fileID: 1965583970}
@@ -1157,8 +1157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be03212e7e47bff46ba746bd34bac8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 750
-  maxHitpoints: 750
+  hitpoints: 900
+  maxHitpoints: 900
   healthUI: {fileID: 1880909479}
   hitpointBar: {fileID: 3819965920798211924}
 --- !u!1 &1703183212
