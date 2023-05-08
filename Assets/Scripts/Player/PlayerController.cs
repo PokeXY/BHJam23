@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 
 
@@ -27,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     Vector2 moveDirection = Vector2.zero;
 
+    private AudioSource hitSFX;
+
     public float hitpoints;
     public float maxHitpoints;
     public TextMeshProUGUI healthUI;
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
         controls = new PlayerAction();
         hitpoints = maxHitpoints;
         healthUI.text = "Player HP: " + hitpoints.ToString();
+        hitSFX = GetComponent<AudioSource>();
     }
 
     public void TakeHit(float damage)
@@ -148,5 +152,10 @@ public class PlayerController : MonoBehaviour
             TakeHit(5);
         }
 
+    }
+
+    public void takeBullet()
+    {
+        hitSFX.Play();
     }
 }

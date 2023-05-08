@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
         hitpoints = maxHitpoints;
         healthUI.text = "HP: " + hitpoints.ToString();
         hitpointBar.SetHealth(hitpoints, maxHitpoints);
+
     }
 
     private void Start()

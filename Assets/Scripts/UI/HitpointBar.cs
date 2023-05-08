@@ -23,7 +23,7 @@ public class HitpointBar : MonoBehaviour
 
     private void Awake()
     {
-        SetHealth(900, 900);
+        SetHealth(1800, 1800);
     }
 
     // Update is called once per frame
